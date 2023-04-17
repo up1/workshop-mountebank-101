@@ -1,0 +1,45 @@
+{
+    "port": 4545,
+    "protocol": "http",
+    "recordRequests": true,
+    "stubs": [
+      {
+        "predicates": [
+          {
+            "equals": {
+              "method": "POST",
+              "path": "/customers/123"
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 201,
+              "headers": {
+                "Location": "http://localhost:4545/customers/123",
+                "Content-Type": "application/xml"
+              },
+              "body": "<customer><email>customer@test.com</email></customer>"
+            }
+          },
+          {
+            "is": {
+              "statusCode": 400,
+              "headers": {
+                "Content-Type": "application/xml"
+              },
+              "body": "<error>email already exists</error>"
+            }
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "is": { "statusCode": 404 }
+          }
+        ]
+      }
+    ]
+  }
