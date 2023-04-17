@@ -30,6 +30,7 @@
         ]
       },
       <% include new_stub.json %>,
+      <% include submit_order.json %>,
       {
         "predicates": [
           { "equals": { "method": "GET" } },

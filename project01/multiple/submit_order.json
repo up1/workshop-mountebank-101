@@ -1,0 +1,45 @@
+{
+    "predicates": [
+      { "equals": { "method": "POST" } },
+      { "equals": { "path": "/api/v1/order" } },
+      {
+        "equals": {
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      },
+      {
+        "equals": {
+          "body": {
+            "cart":[
+              {
+                "product_id": 2,
+                "quantity": 1
+              }
+            ],
+            "shipping_method": "Kerry",
+            "shipping_address": "405/37 ถ.มหิดล",
+            "shipping_sub_district": "ท่าศาลา",
+            "shipping_district": "เมือง",
+            "shipping_province": "เชียงใหม่",
+            "shipping_zip_code": "50000",
+            "recipient_name": "ณัฐญา ชุติบุตร",
+            "recipient_phone_number": "0970809292"
+          }
+        }
+      }
+    ],
+    "responses": [
+      {
+        "is": {
+          "statusCode": 200,
+          "headers": { "Content-Type": "application/json" },
+          "body": {
+            "order_id": 8004359122,
+            "total_price": 14.95
+          }
+        }
+      }
+    ]
+  }
