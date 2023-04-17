@@ -32,7 +32,7 @@
         "is": {
           "statusCode": 200,
           "headers": { "Content-Type": "application/json" },
-          "body": "<%- stringify(filename, 'response/list_all_products.json', null, 4) %>"
+          "body": "<%- stringify(filename, 'response/list_all_products.json') %>"
         }
       }
     ]
