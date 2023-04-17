@@ -9,10 +9,10 @@
       }
     },
     "stubs": [
-
       <% include search_product.json %>,
       <% include product_detail.json %>,
+      <% include submit_order.json %>,
       <% include new_stub.json %>,
-      <% include submit_order.json %>
+      <% include confirm_payment.json %>
     ]
   }
