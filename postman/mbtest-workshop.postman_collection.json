@@ -267,7 +267,7 @@
 			"response": []
 		},
 		{
-			"name": "Submit order Copy",
+			"name": "Confirm payment",
 			"event": [
 				{
 					"listen": "test",
@@ -302,7 +302,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"cart\":[\n\t\t{\n\t\t\t\"product_id\": 2,\n\t\t\t\"quantity\": 1\n\t\t}\n\t],\n\t\"shipping_method\": \"Kerry\",\n\t\"shipping_address\": \"405/37 ถ.มหิดล\",\n\t\"shipping_sub_district\": \"ท่าศาลา\",\n\t\"shipping_district\": \"เมือง\",\n\t\"shipping_province\": \"เชียงใหม่\",\n\t\"shipping_zip_code\": \"50000\",\n\t\"recipient_name\": \"ณัฐญา ชุติบุตร\",\n\t\"recipient_phone_number\": \"0970809292\"\n}",
+					"raw": "{\n  \"order_id\": 8004359122,\n  \"payment_type\": \"credit\",\n  \"type\": \"visa\",\n  \"card_number\": \"4111111111111111\",\n  \"cvv\": \"752\",\n  \"expired_month\": 7,\n  \"expired_year\": 20,\n  \"card_name\": \"Karnwat Wongudom\",\n  \"total_price\": 14.95\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -310,7 +310,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v1/order",
+					"raw": "http://localhost:8000/api/v1/confirmPayment",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -319,7 +319,7 @@
 					"path": [
 						"api",
 						"v1",
-						"order"
+						"confirmPayment"
 					]
 				}
 			},
