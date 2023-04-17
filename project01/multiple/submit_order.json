@@ -10,6 +10,11 @@
         }
       },
       {
+        "exists": {
+          "headers": { "Authorization": true }
+        }
+      },
+      {
         "equals": {
           "body": {
             "cart":[
