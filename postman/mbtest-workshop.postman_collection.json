@@ -152,6 +152,53 @@
 			"response": []
 		},
 		{
+			"name": "Submit order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cart\":[\n\t\t{\n\t\t\t\"product_id\": 2,\n\t\t\t\"quantity\": 1\n\t\t}\n\t],\n\t\"shipping_method\": \"Kerry\",\n\t\"shipping_address\": \"405/37 ถ.มหิดล\",\n\t\"shipping_sub_district\": \"ท่าศาลา\",\n\t\"shipping_district\": \"เมือง\",\n\t\"shipping_province\": \"เชียงใหม่\",\n\t\"shipping_zip_code\": \"50000\",\n\t\"recipient_name\": \"ณัฐญา ชุติบุตร\",\n\t\"recipient_phone_number\": \"0970809292\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Cycle response",
 			"event": [
 				{
