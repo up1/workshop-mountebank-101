@@ -1,0 +1,6 @@
+{
+    "imposters": [
+        <% include stub01.json %>,
+        <% include stub02.json %>
+    ]
+}
