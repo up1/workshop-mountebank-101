@@ -10,3 +10,8 @@ $mb start --configfile multiple-imposters.json
 ```
 
 Port :: 8000, 8001
+
+## Cycle response
+```
+$mb start --configfile cycle-response.json
+```
