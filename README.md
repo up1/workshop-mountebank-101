@@ -7,3 +7,6 @@
   * Multiple Imposter
     * Single file
     * Muliple files
+
+## Board
+* [Miro board](https://miro.com/app/board/uXjVMTIYkJ4=/)
