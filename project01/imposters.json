@@ -1,0 +1,26 @@
+{
+  "port": 8000,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        { "equals": { "method": "GET" } },
+        { "equals": { "path": "/api/v1/product/1" } }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "id": 1,
+              "product_name": "Balance Training Bicycle",
+              "product_price": 119.95,
+              "product_image": "/Balance_Training_Bicycle.png"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
