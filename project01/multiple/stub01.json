@@ -34,6 +34,27 @@
       {
         "predicates": [
           { "equals": { "method": "GET" } },
+          { "equals": { "path": "/api/v1/product" } },
+          { "equals": { "query": {"q": "robot"} } }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": { "Content-Type": "application/json" },
+              "body": {
+                "id": 3,
+                "product_name": "Alpha Bot",
+                "product_price": 33.95,
+                "product_image": "/Alpha Bot.png"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "predicates": [
+          { "equals": { "method": "GET" } },
           { "equals": { "path": "/api/v1/product" } }
         ],
         "responses": [
